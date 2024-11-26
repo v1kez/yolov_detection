@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Детекция объектов</title>
+</head>
+<body>
+    <h1>Загрузите изображение для детекции объектов</h1>
+    <form method="post" action="/upload" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <label for="classes">Выберите классы для фильтрации:</label>
+        <select name="classes" id="classes" multiple>
+            <option value="person">Человек</option>
+            <option value="bicycle">Велосипед</option>
+            <option value="car">Автомобиль</option>
+            <option value="motorcycle">Мотоцикл</option>
+            <option value="airplane">Самолет</option>
+            <option value="bus">Автобус</option>
+            <option value="train">Поезд</option>
+            <option value="truck">Грузовик</option>
+            <option value="boat">Лодка</option>
+            <option value="traffic light">Светофор</option>
+            <option value="fire hydrant">Пожарный гидрант</option>
+            <option value="stop sign">Знак остановки</option>
+            <option value="parking meter">Паркомат</option>
+            <option value="bench">Скамейка</option>
+            <option value="bird">Птица</option>
+            <option value="cat">Кошка</option>
+            <option value="dog">Собака</option>
+            <option value="horse">Лошадь</option>
+            <option value="sheep">Овца</option>
+            <option value="cow">Корова</option>
+            <option value="elephant">Слон</option>
+            <option value="bear">Медведь</option>
+            <option value="zebra">Зебра</option>
+            <option value="giraffe">Жираф</option>
+            <option value="backpack">Рюкзак</option>
+            <option value="umbrella">Зонт</option>
+            <option value="handbag">Сумка</option>
+            <option value="tie">Галстук</option>
+            <option value="suitcase">Чемодан</option>
+            <option value="frisbee">Фрисби</option>
+            <option value="skis">Лыжи</option>
+            <option value="snowboard">Сноуборд</option>
+            <option value="sports ball">Спортивный мяч</option>
+            <option value="kite">Воздушный змей</option>
+            <option value="baseball bat">Бейсбольная бита</option>
+            <option value="baseball glove">Бейсбольная перчатка</option>
+            <option value="skateboard">Скейтборд</option>
+            <option value="surfboard">Серфборд</option>
+            <option value="tennis racket">Теннисная ракетка</option>
+            <option value="bottle">Бутылка</option>
+            <option value="wine glass">Бокал вина</option>
+            <option value="cup">Чашка</option>
+            <option value="fork">Вилка</option>
+            <option value="knife">Нож</option>
+            <option value="spoon">Ложка</option>
+            <option value="bowl">Чаша</option>
+            <option value="banana">Банан</option>
+            <option value="apple">Яблоко</option>
+            <option value="sandwich">Сэндвич</option>
+            <option value="orange">Апельсин</option>
+            <option value="broccoli">Брокколи</option>
+            <option value="carrot">Морковь</option>
+            <option value="hot dog">Хот-дог</option>
+            <option value="pizza">Пицца</option>
+            <option value="donut">Пончик</option>
+            <option value="cake">Торт</option>
+            <option value="chair">Стул</option>
+            <option value="couch">Диван</option>
+            <option value="potted plant">Комнатное растение</option>
+            <option value="bed">Кровать</option>
+            <option value="dining table">Обеденный стол</option>
+            <option value="toilet">Унитаз</option>
+            <option value="TV">Телевизор</option>
+            <option value="laptop">Ноутбук</option>
+            <option value="mouse">Мышь</option>
+            <option value="remote">Пульт</option>
+            <option value="keyboard">Клавиатура</option>
+            <option value="cell phone">Мобильный телефон</option>
+            <option value="microwave">Микроволновая печь</option>
+            <option value="oven">Духовка</option>
+            <option value="toaster">Тостер</option>
+            <option value="sink">Раковина</option>
+            <option value="refrigerator">Холодильник</option>
+            <option value="book">Книга</option>
+            <option value="clock">Часы</option>
+            <option value="vase">Ваза</option>
+            <option value="scissors">Ножницы</option>
+            <option value="teddy bear">Медвежонок</option>
+            <option value="hair drier">Фен</option>
+            <option value="toothbrush">Зубная щетка</option>
+        </select>
+        <div>
+            <input type="checkbox" name="filter_objects" value="1" checked>
+            <label for="filter_objects">Фильтровать объекты</label>
+        </div>
+        <input type="submit" value="Загрузить">
+    </form>
+
+    <div id="result"></div>
+</body>
+</html>
